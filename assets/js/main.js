@@ -9,7 +9,7 @@
 	var	$window = $(window),
 		$body = $('body'),
 		$wrapper = $('#page-wrapper'),
-		$banner1 = $('#banner1'),
+		$banner = $('#banner'),
 		$header = $('#header');
 
 	// Breakpoints.
@@ -66,12 +66,12 @@
 			});
 
 	// Header.
-		if ($banner1.length > 0
+		if ($banner.length > 0
 		&&	$header.hasClass('alt')) {
 
 			$window.on('resize', function() { $window.trigger('scroll'); });
 
-			$banner1.scrollex({
+			$banner.scrollex({
 				bottom:		$header.outerHeight() + 1,
 				terminate:	function() { $header.removeClass('alt'); },
 				enter:		function() { $header.addClass('alt'); },
